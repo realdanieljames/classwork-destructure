@@ -1,7 +1,7 @@
 /******************************************************************************
  * /*YOU WILL PROBABLY NOT HAVE TO TAKE DESTRUCTURING TO SUCH A LEVEL AS THIS *
  *    BUT THIS IS FOR YOU TO REALLY WRAP YOUR BRAINS AROUND THE MECHANICS.    *
- *                 EVERY EXERCISE SHOULD USE DESTRUCTURING*/                  *
+ *                 EVERY EXERCISE SHOULD USE DESTRUCTURING*/                  
   //******************************************************************************/
 
   // 1.
@@ -18,20 +18,19 @@
 
 
 const obj = Object.fromEntries(arr1)
-// console.log(obj)
+console.log('object: ',  obj)
 
 const objKeys = Object.keys(obj)
-// console.log(objKeys)
+console.log('keys:', objKeys)
 
 const objValues = Object.values(obj)
-// console.log(objValues)
+console.log('values:',  objValues)
 
 const [name, age, eyes] = objValues
-console.log(name)
+// console.log(name)
 
 //=============================================================================//
 //=============================================================================//
-
 
 
 // 2.
@@ -42,12 +41,15 @@ console.log(name)
  **************************************************************************/
 let arr2 = [1, 2, 3, 4, 5, 6]
 
-
 let [one, two, four, three, ...rest] = arr2
-// console.log(four)
-three = four
-// console.log(three)
-// console.log(four)
+console.log(four)
+
+let temp = four;
+four = three;
+three = temp;
+
+console.log(three)
+console.log(four)
 
 //=============================================================================//
 //=============================================================================//
