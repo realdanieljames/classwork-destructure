@@ -1,16 +1,53 @@
-/*You will probably not have to take destructuring to such a level as this but this is for you to really wrap your brains around the mechanics.
-EVERY EXERCISE SHOULD USE DESTRUCTURING*/
+/******************************************************************************
+ * /*YOU WILL PROBABLY NOT HAVE TO TAKE DESTRUCTURING TO SUCH A LEVEL AS THIS *
+ *    BUT THIS IS FOR YOU TO REALLY WRAP YOUR BRAINS AROUND THE MECHANICS.    *
+ *                 EVERY EXERCISE SHOULD USE DESTRUCTURING*/                  *
+  //******************************************************************************/
+
+  // 1.
+  /**************************************************************************
+   *                //CREATE AN OBJECT OUT OF THE ARR1 BELOW                 *
+   * //  THEN USING DESTRUCTURING, DECLARE VARIABLES USING THE OBJECT KEYS. *
+   **************************************************************************/
+  let arr1 = [
+    ['name', 'jon'],
+    ['age', 20],
+    ['eyes', 'blue'],
+  ];
 
 
-1. let arr = [
-   ['name', 'jon'],
-   ['age', 20],
-   ['eyes', 'blue'],
-   ];
- //Create an object out of the arr above then using destructuring, declare variables using the object keys.
- 
- 
-2. 
-let arr = [1,2,3,4,5,6]
-  //a. Set 3 variables names: the third index should be called 'three', the fourth item 'four' and the rest of the items thereafter 'rest'
-  //b. Swap the third and fourth item variable values
+
+const obj = Object.fromEntries(arr1)
+// console.log(obj)
+
+const objKeys = Object.keys(obj)
+// console.log(objKeys)
+
+const objValues = Object.values(obj)
+// console.log(objValues)
+
+const [name, age, eyes] = objValues
+console.log(name)
+
+//=============================================================================//
+//=============================================================================//
+
+
+
+// 2.
+/**************************************************************************
+ * //A. SET 3 VARIABLES NAMES: THE THIRD INDEX SHOULD BE CALLED 'THREE',  *
+ * //  THE FOURTH ITEM 'FOUR' AND THE REST OF THE ITEMS THEREAFTER 'REST' *
+ *          //B. SWAP THE THIRD AND FOURTH ITEM VARIABLE VALUES           *
+ **************************************************************************/
+let arr2 = [1, 2, 3, 4, 5, 6]
+
+
+let [one, two, four, three, ...rest] = arr2
+// console.log(four)
+three = four
+// console.log(three)
+// console.log(four)
+
+//=============================================================================//
+//=============================================================================//
